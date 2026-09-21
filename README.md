@@ -174,6 +174,8 @@ See the complete deployment guide in [aws-deployment.md](aws-deployment.md) for 
 
 ---
 
-## 📄 License
+## 📄 License & Proprietary Rights
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+Copyright © 2026 AuditFlow. All Rights Reserved.
+
+This software and associated documentation files are proprietary and confidential. Unauthorized copying, distribution, modification, or transfer of this software, via any medium, is strictly prohibited.
