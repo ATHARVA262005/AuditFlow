@@ -1,0 +1,17 @@
+# Build artifacts
+target/
+frontend/dist/
+frontend/node_modules/
+node_modules/
+
+# IDE & OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs & Environment
+*.log
+.env
+.env.local

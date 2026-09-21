@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+
+    <mirrors>
+        <mirror>
+            <id>central-direct</id>
+            <name>Maven Central Direct Mirror</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>wagon-ssl-tuning</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <maven.wagon.http.pool>false</maven.wagon.http.pool>
+                <maven.wagon.http.retryHandler.count>5</maven.wagon.http.retryHandler.count>
+                <maven.wagon.http.retryHandler.requestSentKeepAliveRuntime>true</maven.wagon.http.retryHandler.requestSentKeepAliveRuntime>
+                <maven.wagon.http.timeout>60000</maven.wagon.http.timeout>
+                <https.protocols>TLSv1.2,TLSv1.3</https.protocols>
+            </properties>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>wagon-ssl-tuning</activeProfile>
+    </activeProfiles>
+</settings>
